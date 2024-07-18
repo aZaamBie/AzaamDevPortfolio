@@ -1,0 +1,85 @@
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    /* overflow: hidden; */
+    /* perspective: 1px; */
+    /* transform-style: preserve-3d; */
+
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+}
+
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+.wrapper header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+
+.bg{
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(4px);
+    filter: grayscale();
+}
+
+.fg{
+    transform: translateZ(-1px) scale(2.2);
+    /* transform: translateZ(-0.5px) scale(1.7); */
+}
+
+.bg, .fg{
+    /* THis clips some of the content */
+    width: auto;
+    /* THis shows the full image */
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    /* Gives correct aspect ratio [object-fit] */
+    object-fit: cover;
+
+    z-index: -1;
+    transform-style: preserve-3d;
+}
+
+.title{
+    top:30%;
+    left:50%;
+    position: absolute;
+    color: #e8eaed;
+
+    font-size: 7em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 4px black;
+    /* This piece below helps text to become centered */
+    transform: scale(1,1.1) translate(-50%, 10%);
+    transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
+}
+
+.container{
+    background-color: #dbd6c7;
+}
+
+.section{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #dbd6c7;
+    color: #16adf2;
+}
