@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    
 }
 
 body{
@@ -15,12 +16,25 @@ body{
     background-color: #16adf2 !important;
 }
 
-.header h1{
+.header_ h1{
     color: #030407;
     outline: #e8eaed 1px;
+
+    position: absolute;
+    color: #e8eaed;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 4px black;
+    /* This piece below helps text to become centered */
+    /* TEST */
+    transform: scale(1,1.1) translate(-50%, 10%);
+    transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
+
+    top: 30%;
+    left: 50%;
 }
 
-.header{
+.header_{
     width: 100%;
 	padding: 0px;
     margin: auto;
@@ -29,16 +43,35 @@ body{
     text-align: center;
 
     overflow-y: auto;
+    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
-    perspective: 1px;}
+    /* HIDDEN FOR BOTH WORKS BEST HERE */
 
-.header img{
+    perspective: 1px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.header_ img{
     width: 100%;
     height: 50vh;
     height: 50%;
+
+    /* min-height: 100vh; */
+    /* position: absolute; */
+    /* Gives correct aspect ratio [object-fit] */
+    object-fit: cover;
+
     z-index: -1;
+    transform-style: preserve-3d;
+    background-size: cover;
 }
 
+.bg{
+    transform: translateZ(-1px) scale(1.1);
+    filter: blur(4px);
+}
 
 /* CONTAINER */
 #heroCont{
@@ -49,9 +82,7 @@ body{
 .hero{
     padding-top: 2%;
     display: inline-block;
-    vertical-align: top;
-    justify-content: center;
-    align-items: center;
+    /* vertical-align: top; */
 
     display: flex;
     align-items: center;
@@ -63,10 +94,12 @@ body{
     max-height: 20%;
 }
 
-.hero h2{
+.hero h1, h2{
     color: #e8eaed;
 
-    font-size: 7em;
+    font-size: 100px;
+    font-size: 10vh;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: -2px -2px 4px black;
 
@@ -76,4 +109,5 @@ body{
     /* shadow to the right V */
     text-shadow: 10px 1px 4px black;
 
-    padding-left: 20px;}
+    /* padding-left: 20px; */
+}
