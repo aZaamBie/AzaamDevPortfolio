@@ -21,6 +21,11 @@ body{
     */
 }
 
+.mask-text{
+    text-shadow: -2px 0 rgb(25, 25, 25), 0 2px rgb(25, 25, 25), 2px 0 rgb(25, 25, 25), 0 -2px rgb(25, 25, 25);
+}
+
+
 .header_ h1{
     color: #000000;
     outline: #e8eaed 1px;
@@ -66,18 +71,24 @@ body{
 
 .header_ img{
     width: 100%;
+    /* width: 80%; */
     
-    height: 50vh;
-    height: 50%;
+    /* height: 50vh; */
+    /* height: 50%; */
 
     /* min-height: 100vh; */
     /* position: absolute; */
     /* Gives correct aspect ratio [object-fit] */
     object-fit: cover;
+    /* object-fit:contain; */
+    /* object-fit: fill; */
+
 
     z-index: -1;
     transform-style: preserve-3d;
-    background-size: cover;
+    /* background-size: cover; */
+
+    /* margin-bottom: -2em; */
 }
 
 .imgButton{
@@ -131,6 +142,9 @@ body{
 }
 .hero img:hover{
     transform: scale(1.1,1.1); 
+
+    /* transform: translateX(-100px); */
+    transform: translateX(-10px);
 }
 
 .hero h1, h2{
@@ -188,23 +202,34 @@ body{
 
     font-weight: normal;
 
-    padding: 5px;
+    /* padding: 5px; */
     height: 1px !important;
 
     background-color: #e8eaed !important;
     color: #000000;
+
+
+    border: 1px black dotted !important;
+    border-radius: 20px !important;
+
+    transform: rotateZ(5deg);
 }
 .menuButton:hover{
     transform: scale(1.02,1.02); 
-    /* transform: rotateZ(5deg); */
-    transform: rotateX(50deg);
+    transform: rotateZ(0deg);
+    /* transform: rotateY(10deg); */
 
     font-weight: bold;
 }
 
 .cloudBlock{
+    position: relative;
+
+    z-index: -2;
     border-radius: 50px !important;
     
+    animation: floatSlow 3s ease;
+    animation-iteration-count: infinite;
 }
 
 .footer{
@@ -232,4 +257,10 @@ body{
 
     to{ transform: translateX(0);}
     
+}
+
+@keyframes floatSlow {
+    0% { transform: translateX(20px); transform: translateY(10px); }
+    50% { transform: translateX(0px); transform: translateY(0px); } 
+    100%  { transform: translateX(20px); transform: translateY(10px); }
 }
