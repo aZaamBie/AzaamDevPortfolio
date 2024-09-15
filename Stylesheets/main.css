@@ -185,6 +185,22 @@ body{
     transform: scale(1.05,1.05); 
 }
 
+.btn-group .button {
+    background-color: rgb(255, 255, 255); 
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    display: block;
+}
+.btn-group .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
 /* .clickableFigure{
     transform: translateX(-500px);
     transition: transform 0.3s;
