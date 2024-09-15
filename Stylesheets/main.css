@@ -13,11 +13,16 @@ body{
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    background-color: #16adf2 !important;
+    background-color: rgb(90, 1, 233) !important;
+
+    /* BLUES:                           // rgb(90, 1, 233) // 
+    - Chrysler blue: #4802BE // #5302DA // #5A01E9        // #5102D4 
+    - original: #16adf2
+    */
 }
 
 .header_ h1{
-    color: #030407;
+    color: #000000;
     outline: #e8eaed 1px;
 
     position: absolute;
@@ -75,6 +80,11 @@ body{
     background-size: cover;
 }
 
+.imgButton{
+    position: relative;
+    animation: slideInRight 1s ease-in-out;
+}
+
 .bg{
     transform: translateZ(-1px) scale(1.1);
     filter: blur(5px);
@@ -97,8 +107,11 @@ body{
 }
 
 .hero img{
-    max-width: 20%;
-    max-height: 20%;
+    /* original method for width */
+    /* max-width: 20%;
+    max-height: 20%; */
+    max-width: 50%;
+    max-height: 50%;
 
     /* transform vfx */
     transform: scale(1.0,1.0); 
@@ -108,7 +121,13 @@ body{
     /* animation-name: slideInRight;
     animation-duration: 1s;
     animation-timing-function: ease-in-out; */
-    animation: slideInRight 1s ease-in-out;
+
+    /* animation: slideInRight 1s ease-in-out; */
+
+    /* only play animation, when element is on screen */
+    /* animation-timeline: view(); */
+    /* animation-range: 0; */
+
 }
 .hero img:hover{
     transform: scale(1.1,1.1); 
@@ -132,6 +151,10 @@ body{
     /* text-shadow: 0px -10px -10px black; */
 
     /* padding-left: 20px; */
+
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+    /* TRANSFOMRS */
     transform: scale(1.0,1.0); 
     transition: transform 0.3s;
 
@@ -142,8 +165,55 @@ body{
 .hero h1, h2:hover{
     text-shadow: 10px 15px 10px black;
 
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
     transform: scale(1.05,1.05); 
 }
+
+/* .clickableFigure{
+    transform: translateX(-500px);
+    transition: transform 0.3s;
+} */
+
+.menuButton{
+    /* COLOR */
+    /* background-color: transparent !important; */
+
+    text-decoration: none;
+
+    /* TRANSFOMRS */
+    transform: scale(1.0,1.0); 
+    transition: transform 0.3s;
+
+    font-weight: normal;
+
+    padding: 5px;
+    height: 1px !important;
+
+    background-color: #e8eaed !important;
+    color: #000000;
+}
+.menuButton:hover{
+    transform: scale(1.02,1.02); 
+    /* transform: rotateZ(5deg); */
+    transform: rotateX(50deg);
+
+    font-weight: bold;
+}
+
+.cloudBlock{
+    border-radius: 50px !important;
+    
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgb(90, 1, 233), rgb(69, 1, 179) ) !important;
+}
+
 
 /* ANIMATIONS */
 /* home page */
