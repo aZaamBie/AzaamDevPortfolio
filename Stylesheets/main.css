@@ -1,8 +1,6 @@
 html {
     scroll-behavior: smooth;
-    
 }
-
 body{
 	margin: 0;
     padding: 0%;
@@ -84,16 +82,12 @@ body{
     /* object-fit: fill; */
 
 
+    /* z-index: 1; */
     z-index: -1;
     transform-style: preserve-3d;
     /* background-size: cover; */
 
     /* margin-bottom: -2em; */
-}
-
-.imgButton{
-    position: relative;
-    animation: slideInRight 1s ease-in-out;
 }
 
 .bg{
@@ -110,7 +104,6 @@ body{
 .hero{
     padding-top: 2%;
     display: inline-block;
-    /* vertical-align: top; */
 
     display: flex;
     align-items: center;
@@ -118,13 +111,6 @@ body{
 }
 
 .hero img{
-    /* original method for width */
-    /* max-width: 20%;
-    max-height: 20%; */
-    max-width: 50%;
-    max-height: 50%;
-
-    /* transform vfx */
     transform: scale(1.0,1.0); 
     transition: transform 0.3s;
 
@@ -138,14 +124,25 @@ body{
     /* only play animation, when element is on screen */
     /* animation-timeline: view(); */
     /* animation-range: 0; */
-
 }
 .hero img:hover{
     transform: scale(1.1,1.1); 
-
-    /* transform: translateX(-100px); */
     transform: translateX(-10px);
 }
+
+.character{
+    position: relative;
+    animation: slideInRight 1s ease-in-out;
+    z-index: 2;
+    width: 20%;
+}
+
+.characterIMG{
+    max-height: 80vh;
+    max-width: 100%;
+}
+
+
 
 .hero h1, h2{
     color: #e8eaed;
@@ -173,7 +170,7 @@ body{
     transition: transform 0.3s;
 
     /*!! ANIMATION  !!*/
-    animation: slideInLeft 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero h1, h2:hover{
@@ -185,58 +182,52 @@ body{
     transform: scale(1.05,1.05); 
 }
 
-.btn-group .button {
-    background-color: rgb(255, 255, 255); 
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    width: 150px;
+/* NEW MENU ITEMS */
+.menuOptions{
+    z-index: 3;
+    position: relative;
+    margin-top: 20px;
+}
+
+.menuItem{
     display: block;
-}
-.btn-group .button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
-}
-
-/* .clickableFigure{
-    transform: translateX(-500px);
-    transition: transform 0.3s;
-} */
-
-.menuButton{
-    /* COLOR */
-    /* background-color: transparent !important; */
+    font-size: 5rem;
+    padding: 15px 0;
 
     text-decoration: none;
-
-    /* TRANSFOMRS */
-    transform: scale(1.0,1.0); 
-    transition: transform 0.3s;
-
-    font-weight: normal;
-
-    /* padding: 5px; */
-    height: 1px !important;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
     background-color: #e8eaed !important;
-    color: #000000;
+    border: 2px black solid !important;
+    border-radius: 10px !important;
 
+    transform: scale(1.0,1.0); 
+    transition: all 0.3s ease;
 
-    border: 1px black dotted !important;
-    border-radius: 20px !important;
+    animation: slideInLeft 1s ease;
 
-    transform: rotateZ(5deg);
+    /* Add border shadow */
+    box-shadow: 10px 0px 1px rgba(0, 0, 0, 1.0);
+
+    
 }
-.menuButton:hover{
+.menuItem:hover{
     transform: scale(1.02,1.02); 
-    transform: rotateZ(0deg);
-    /* transform: rotateY(10deg); */
+    /* font-weight: bold; */
 
-    font-weight: bold;
+    color: #00BFFF; /* light blue color on hover */
+    text-shadow: 0 0 10px #00BFFF;
+
+    /* Add border shadow */
+    /* box-shadow: 10px 10px 50px rgba(0, 0, 0, 1);*/
+
+    box-shadow: -20px 0px 2px rgba(0, 0, 0, 1.0);
+
+    transition: all 0.3s ease;
 }
+
 
 .cloudBlock{
     position: relative;
@@ -258,6 +249,17 @@ body{
 
 /* ANIMATIONS */
 /* home page */
+
+@keyframes fadeIn{
+    from{ opacity: 0%;}
+    to{ opacity: 100%;}
+}
+
+@keyframes slideDown{
+    from{ transform: translateY(-500px);}
+    to{ transform: translateY(0px);}
+}
+
 @keyframes slideInRight {
     from{
         transform: translateX(-500px);
