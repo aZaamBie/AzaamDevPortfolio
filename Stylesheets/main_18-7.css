@@ -1,85 +1,325 @@
-html{
-    height: 100vh;
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
 }
-
 body{
-    margin: 0;
-    /* overflow: hidden; */
-    /* perspective: 1px; */
-    /* transform-style: preserve-3d; */
-
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
-}
-
-
-.wrapper{
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 1px;
-    transform-style: preserve-3d;
-}
-.wrapper header{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	margin: 0;
+    padding: 0%;
     height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
-}
-
-
-.bg{
-    transform: translateZ(-1px) scale(2.2);
-    filter: blur(4px);
-    filter: grayscale();
-}
-
-.fg{
-    transform: translateZ(-1px) scale(2.2);
-    /* transform: translateZ(-0.5px) scale(1.7); */
-}
-
-.bg, .fg{
-    /* THis clips some of the content */
-    width: auto;
-    /* THis shows the full image */
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    position: absolute;
-    /* Gives correct aspect ratio [object-fit] */
-    object-fit: cover;
 
-    z-index: -1;
-    transform-style: preserve-3d;
+    color: #e8eaed;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: rgb(90, 1, 233) !important;
+
+    /* BLUES:                           // rgb(90, 1, 233) // 
+    - Chrysler blue: #4802BE // #5302DA // #5A01E9        // #5102D4 
+    - original: #16adf2
+    */
 }
 
-.title{
-    top:30%;
-    left:50%;
+.mask-text{
+    text-shadow: -2px 0 rgb(25, 25, 25), 0 2px rgb(25, 25, 25), 2px 0 rgb(25, 25, 25), 0 -2px rgb(25, 25, 25);
+}
+
+
+.header_ h1{
+    color: #000000;
+    outline: #e8eaed 1px;
+
     position: absolute;
     color: #e8eaed;
 
-    font-size: 7em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 2px 2px 4px black;
     /* This piece below helps text to become centered */
-    transform: scale(1,1.1) translate(-50%, 10%);
+    /* TEST */
+    /* transform: scale(1,1.1) translate(-50%, 10%); */
     transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
+    transition: transform 0.5s;
+
+    top: 30%;
+    left: 50%;
+}
+.header_ h1:hover{
+    transform: translateZ(-0.5px) scale(1.6,1.7) translate(-33%,10%);
 }
 
-.container{
-    background-color: #dbd6c7;
-}
 
-.section{
+
+.header_{
+    width: 100%; 
+	padding: 0px;
+    margin: auto;
+	overflow: hidden;
+
     text-align: center;
-    font-size: 2rem;
-    padding: 2rem;
-    background-color: #dbd6c7;
-    color: #16adf2;
+
+    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* HIDDEN FOR BOTH WORKS BEST HERE */
+
+    perspective: 1px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.header_ img{
+    width: 100%;
+    /* width: 80%; */
+    
+    /* height: 50vh; */
+    /* height: 50%; */
+
+    /* min-height: 100vh; */
+    /* position: absolute; */
+    /* Gives correct aspect ratio [object-fit] */
+    object-fit: cover;
+    /* object-fit:contain; */
+    /* object-fit: fill; */
+
+
+    /* z-index: 1; */
+    z-index: -1;
+    transform-style: preserve-3d;
+    /* background-size: cover; */
+
+    /* margin-bottom: -2em; */
+}
+
+.bg{
+    transform: translateZ(-1px) scale(1.1);
+    filter: blur(5px);
+}
+
+/* CONTAINER */
+#heroCont{
+    align-items: center;
+    text-align: center;
+}
+/* SECTION */
+.hero{
+    padding-top: 2%;
+    display: inline-block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img{
+    transform: scale(1.0,1.0); 
+    transition: transform 0.3s;
+
+    /*!! animation !!*/
+    /* animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; */
+
+    /* animation: slideInRight 1s ease-in-out; */
+
+    /* only play animation, when element is on screen */
+    /* animation-timeline: view(); */
+    /* animation-range: 0; */
+}
+.hero img:hover{
+    transform: scale(1.1,1.1); 
+    transform: translateX(-10px);
+}
+
+.character{
+    position: relative;
+    animation: slideInRight 1s ease-in-out;
+    z-index: 2;
+    width: 20%;
+}
+
+.characterIMG{
+    max-height: 80vh;
+    max-width: 100%;
+}
+
+
+
+.hero h1, h2{
+    color: #e8eaed;
+
+    font-size: 100px;
+    font-size: 10vh;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: -2px -2px 4px black;
+
+    /* shadow to the left V */
+    /* text-shadow: -6px -1px 4px black; */
+
+    /* shadow to the right V */
+    /* text-shadow: 10px 1px 4px black; */
+    text-shadow: 10px -15px 10px black;
+    /* text-shadow: 0px -10px -10px black; */
+
+    /* padding-left: 20px; */
+
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+    /* TRANSFOMRS */
+    transform: scale(1.0,1.0); 
+    transition: transform 0.3s;
+
+    /*!! ANIMATION  !!*/
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1, h2:hover{
+    text-shadow: 10px 15px 10px black;
+
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
+    transform: scale(1.05,1.05); 
+}
+
+/* NEW MENU ITEMS */
+.menuOptions{
+    z-index: 3;
+    position: relative;
+    margin-top: 20px;
+}
+
+.menuItem{
+    display: block;
+    font-size: 5rem;
+    padding: 15px 0;
+
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    background-color: #e8eaed !important;
+    border: 2px black solid !important;
+    border-radius: 10px !important;
+
+    transform: scale(1.0,1.0); 
+
+    animation: slideInLeft 1s ease;
+
+    /* Add border shadow */
+    box-shadow: 10px 0px 1px rgba(0, 0, 0, 1.0);
+
+    transition: all 0.3s ease;
+}
+.menuItem:hover{
+    transform: scale(1.02,1.02); 
+
+    color: #00BFFF; /* light blue color on hover */
+    text-shadow: 0 0 10px #00BFFF;
+
+    /* Add border shadow */
+    box-shadow: -20px 0px 2px rgba(0, 0, 0, 1.0);
+
+    transition: all 0.3s ease;
+}
+
+
+.cloudBlock{
+    /* position: relative; */
+
+    z-index: -1;
+    border-radius: 50px !important;
+    
+    animation: floatSlow 3s ease;
+    animation-iteration-count: infinite;
+}
+.cloudBlock-stationary{
+    /* position: relative; */
+
+    z-index: -1;
+    border-radius: 10px !important;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgb(90, 1, 233), rgb(69, 1, 179) ) !important;
+}
+
+
+/* OVERLAYS */
+.menu-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Makes the bubbles unclickable */
+    z-index: -1; /* Keeps it behind the content */
+}
+.bubble {
+    position: absolute;
+    bottom: -50px; /* Start below the visible area */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(173, 216, 230, 0.6); /* Light blue with transparency */
+    border-radius: 50%;
+    animation: floatBubble 6s infinite ease-in;
+    opacity: 0.7;
+
+    left: 0%;
+}
+/* bubble sizes */
+.bubble:nth-child(2) { width: 25px; height: 25px; animation-duration: 6s; left: 20%; }
+.bubble:nth-child(3) { width: 15px; height: 15px; animation-duration: 8s; left: 40%; }
+.bubble:nth-child(4) { width: 35px; height: 35px; animation-duration: 12s; left: 60%; }
+.bubble:nth-child(5) { width: 10px; height: 10px; animation-duration: 10s; left: 80%; }
+.bubble:nth-child(6) { width: 20px; height: 20px; animation-duration: 5s; left: 95%; }
+/* float animation */
+@keyframes floatBubble{
+    0% {transform: translateY(0) scale(1); } /* start at bottom */
+    50% {transform: translateY(-50vh) scale(1.2); } /* */
+    100%{ transform: translateY(-100vh) scale(1); } /* */
+} 
+    
+
+
+
+/* ANIMATIONS */
+/* home page */
+
+@keyframes fadeIn{
+    from{ opacity: 0%;}
+    to{ opacity: 100%;}
+}
+
+@keyframes slideDown{
+    from{ transform: translateY(-500px);}
+    to{ transform: translateY(0px);}
+}
+
+@keyframes slideInRight {
+    from{
+        transform: translateX(-500px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from{ transform: translateX(500px); }
+
+    to{ transform: translateX(0);}
+    
+}
+
+@keyframes floatSlow {
+    0% { transform: translateX(20px); transform: translateY(10px); }
+    50% { transform: translateX(0px); transform: translateY(0px); } 
+    100%  { transform: translateX(20px); transform: translateY(10px); }
 }

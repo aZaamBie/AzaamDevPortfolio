@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Azaam's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="The official website portfolio for Azaam holdman. Contains videogames, websites, applications and more developed by Azaam.">
+    <meta name="keywords" content="Azaam, Azaam Dev, Azaam Holdman, Game Dev, Godot Engine">
+    <meta name="author" content="Azaam Holdman">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="Stylesheets/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+
+<body>
+
+    <!-- overlay ambiance -->
+    <div class="menu-overlay bubbles">
+        <div class="bubble">  </div> <div class="bubble">  </div>
+        <div class="bubble">  </div> <div class="bubble">  </div>
+        <div class="bubble">  </div> <div class="bubble">  </div>
+
+
+        <div class="leftHalf" style="z-index: 0; position: fixed; width: 50vw; height: 100vh;  overflow: hidden;  right: 50%;">
+            <img class="img-responsive img-fluid imgLeft" src="Assets/images/night_20240502_192423.jpg"
+            style="filter: blur(4px); object-fit: cover; width: 101vw; height: 101vh; filter: brightness(0.5);">
+        </div>
+        <div class="center-line"></div>
+        <div class="rightHalf" style="z-index: 1; position: fixed; width: 50vw; height: 100vh;  overflow: hidden; left: 50%; ">
+            <img class="img-responsive img-fluid imgRight" src="Assets/images/day_IMG_20240206_140626.jpg"
+            style="filter: blur(4px); object-fit: cover; width: 101vw; height: 101vh; filter: brightness(0.5);">
+        </div>
+    </div>
+
+    <!-- <div class="leftHalf">
+
+    </div> -->
+
+    <div class="container-fluid text-center py-1" id="heroCont">
+        <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello there! I'm Azaam Holdman</h2>
+
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="position-relative text-center">
+
+                <img id="centerImage" class="img-responsive img-fluid center-image" src="Assets/silhouette/azaamFullBodyMIX.png" alt="Character">
+                
+                <button class="btn btn-success pop-out-button left-button personaBTN" id="leftButton" data-target="left">
+                    <a class="btn py-3" href="Pages/falseUnderConstruction.html">Web development</a>
+                </button>
+                <button class="btn btn-success pop-out-button left-button personaBTN" id="leftButton" data-target="left">
+                    <a class="btn py-3" href="Pages/falseUnderConstruction.html">Graphic Design</a>
+                </button>
+                
+                <button class="btn btn-success pop-out-button right-button personaBTN" id="rightButton" data-target="right">
+                    <a class="btn py-3" href="Pages/falseUnderConstruction.html">Game development</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Custom JavaScript to Toggle Buttons -->
+    <script>
+        // Wait until the DOM is fully loaded before adding event listeners
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("centerImage").addEventListener("click", function() {
+                document.getElementById("leftButton").classList.toggle("show");
+                document.getElementById("rightButton").classList.toggle("show");
+            });
+        });
+
+
+        //// JavaScript for adding/removing the background image on hover
+        // const hoverButton = document.getElementById('leftButton');
+
+        // hoverButton.addEventListener('mouseenter', () => {
+        // document.body.classList.add('image-background');
+        // });
+
+        // hoverButton.addEventListener('mouseleave', () => {
+        // document.body.classList.remove('image-background');
+        // });
+
+        //multiple buttons
+        const buttons = document.querySelectorAll('.personaBTN');
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                document.body.classList.add('image-background');
+            });
+
+            button.addEventListener('mouseleave', () => {
+                document.body.classList.remove('image-background');
+            })
+        });
+
+        
+    </script>
+
+
+    <footer>
+        <div class="container-fluid text-center footer_ d-flex align-items-center justify-content-center"
+        style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <h4> @Azaam Holdman <small>2024</small> |</h4>
+            <a href="https://za.linkedin.com/in/azaam-holdman-364b60194" target="_blank">
+                <img class="img-responsive img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                style="width: 5vh;" >
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

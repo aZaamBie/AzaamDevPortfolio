@@ -12,19 +12,19 @@
 
         <!-- LINKING THE CSS, BOOSTRAP + JS -->
         <link rel="stylesheet" type="text/css" href="Stylesheets/main.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     </head>
     <body>
         <!-- HEADERs SECTION -->
         <div class="header_">
             <header>
-                <!-- <img src="Assets/images/day_IMG_20240206_140626.jpg"> -->
-                <img class="bg" src="Assets/images/LinkedInBanner.jpeg">
+                <img class="bg img-responsive" src="Assets/images/LinkedInBanner.jpeg">
                 <h1 class="title">Azaam Dev</h1>
             </header>
         </div>
@@ -41,7 +41,6 @@
                     <div class="navbar-collapse collapse show justify-content-center" id="bs-example-navbar-collapse-1" style>
                         <ul class="nav navbar-nav">
                             <li class="nav-item active"> <a class="nav-link" href="#">Home</a> </li>
-                            <!-- <li class="nav-item"> <a class="nav-link" href="#">Project Page</a> </li> -->
 
                             <li class="nav-item"> 
                                 <div class="nav-item dropdown">
@@ -52,6 +51,7 @@
                                         <a class="dropdown-item" href="#">Videogames</a>
                                         <a class="dropdown-item" href="Pages/websites.html">Websites</a>
                                         <a class="dropdown-item" href="#">Applications</a>
+                                        <a class="dropdown-item" href="Pages/wallpapers.html">Wallpapers</a>
                                         <!-- <a class="dropdown-item" href="#">2023 Design Projects</a> -->
                                         <a class="dropdown-item" href="#">The graveyard</a>
                                     </div>
@@ -68,32 +68,89 @@
         </nav>
         <!-- END NAVBAR -->
 
-        <div class="container-fluid text-center" id="heroCont">
+        <br>
+
+        <!-- HERO  -->
+        <!-- overlay ambiance -->
+        <div class="menu-overlay bubbles">
+            <div class="bubble">  </div> <div class="bubble">  </div>
+            <div class="bubble">  </div> <div class="bubble">  </div>
+            <div class="bubble">  </div> <div class="bubble">  </div>
+        </div>
+
+        <div class="container-fluid text-center py-5" id="heroCont">
+
+            <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello there! I'm 
+            <strong class="mask-text">Azaam Holdman</strong> </h2>
+
             <section class="hero" id="FrontMenu">
-                <img class="silhouette img-responsive" src="Assets/silhouette/azaamFullBodyMIX.png"
-                style="float: left;"
-                width="50%" height="50%"
-                id="heroIMG">
-                <!-- <h1>Welcome</h1> -->
-                <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello there! I'm Azaam Holdman</h2>
+                
+                <!-- <div class="container text-center"> -->
+                <div class="row align-items-center">
+                    
+                    <!-- character render -->
+                    <div class="col-lg-5 d-none d-lg-block character">
+                        <img class="img-responsive img-fluid imgButton characterIMG" src="Assets/silhouette/azaamFullBodyMIX.png" 
+                        alt="Character">
+                    </div>
+
+                    <!-- buttons -->
+                    <div class="col-lg-7 col-md-12 menuOptions">  <!-- "container-fluid"-->
+
+                        <ul class="menu-list list-unstyled" style="padding: 0;">
+                            <!-- <li> <a class="menu-item btn menuButton py-3" href="#">Web development</a> </li> -->
+                            <li> <a class="menuItem btn py-3" href="Pages/falseUnderConstruction.html">Web development</a> </li>
+                            <!-- menu-item btn btn-link    || "dropdown-item menuButton py-5"-->
+                            <br>
+                            <li> <a class="menuItem btn py-3" href="Pages/falseUnderConstruction.html">Game development</a> </li>
+                            <br>
+                            <li> <a class="menuItem btn py-3" href="Pages/wallpapers.html">Graphic Design</a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
             </section>
         </div>
 
+
         <!-- CONTAINER MAIN -->
-        <div class="container">
+        <div class="container py-5">
 
-            <!-- HOME / HERO PAGE -->
-            <div class="jumbotron text-center" style="background-color:rgb(90, 1, 233);"> 
-                <h1 class=".display-1 mt-0" style="color: black;">Student, Webdev, Gamedev, Graphic Design</h1>
-            </div>
+            <!-- aboutMe -->
+            <div class="jumbotron text-center cloudBlock" id="body_" style="margin-top: 0% !important;">
+                <h1>About me</h1>
 
-            <div class="jumbotron text-center cloudBlock" id==body_>
-                <!-- <p class="mt-3 lead mb-0">Hello there! I'm Azaam holdman.</p> -->
-                <p class="mt-3 lead mb-1">A 1st year Student at the 
+                <br>
+
+                <p class="mt-3 lead mb-1">I'm a 1st year Student at the 
                     <a href="https://www.uct.ac.za" target="_blank">University Of Cape Town</a>
                     , pursuing a <abbr title="Bachelor Of Science">BSc</abbr> in
                     Computer Science and Computer Engineering
                 </p>
+            </div>
+
+            <br> <br> <br>
+
+            <!-- projects -->
+            <div class="jumbotron text-center cloudBlock-stationary" id="bodyProjects">
+                <h1>My latest projects</h1>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item my-3"> <a href="http://tadiwataimu.com" target="_blank"> Tadiwa Taimu's website</a></li>
+
+                            <li class="list-group-item my-3"> <a href="https://bhekamabika.co.za" target="_blank"> Bheka Mabika's website</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <!-- <div class="col-lg-6">
+                            <img src="Assets/images/elements/mobileScreen.png" style="width: 100%;">
+                        </div> -->
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -103,10 +160,14 @@
     <br>
 
     <footer>
-        <div class="container-fluid text-center footer_">
-            <h4> @Azaam Holdman <small>2024</small></h4>
+        <div class="container-fluid text-center footer_ d-flex align-items-center justify-content-center"
+        style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <h4> @Azaam Holdman <small>2024</small> |</h4>
+            <a href="https://za.linkedin.com/in/azaam-holdman-364b60194" target="_blank">
+                <img class="img-responsive img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                style="width: 5vh;" >
+            </a>
         </div>
-
     </footer>
 
 </html>
