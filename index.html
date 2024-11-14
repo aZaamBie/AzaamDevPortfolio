@@ -34,23 +34,19 @@
         padding: 0px; margin: auto;
         overflow: hidden; text-align: center;">
             
-            <img class="img-responsive py-2" src="Assets/images/elements/moon_stylish.png" 
-            style="width: 32px; float: left; filter: brightness(0);"> 
-            <h1>AzaamDev</h1>
+            <h1 style="display: inline-block;" class="py-0">AzaamDev</h1>
+            <img class="img-responsive py-0" src="Assets/images/elements/moon_stylish.png" 
+            style="width: 32px;filter: brightness(0); margin-top: -1.5%;"> 
+
+            <!-- <img class="img-responsive py-0" src="Assets/images/elements/moon_stylish.png" 
+            style="width: 32px;filter: brightness(0); margin-top: -1%;
+            position: absolute; top:20px; text-align: center; "> 
+            <h1 style="display: inline-block; position: relative;"
+            class="py-0">AzaamDev</h1> -->
         </header>
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" role="navigation">
-
-
-            <!-- <ul class="navTitle" style="list-style: none;"> 
-                <li>
-                    <a class="navbar-brand" href="index.html">
-                        <img class="img-responsive" src="Assets/images/elements/moon_stylish.png" 
-                        style="width: 32px;"> 
-                    </a>
-                </li>
-            </ul> -->
 
                 <div class="container-fluid justify-content-center">
 
@@ -101,8 +97,7 @@
 
         <div class="container text-center py-5" id="heroCont">
 
-            <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello there! I'm 
-            Azaam Holdman</h2>
+            <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello there! I'm Azaam Holdman</h2>
 
             <section class="hero" id="FrontMenu">
                 
@@ -122,12 +117,12 @@
 
                         <ul class="menu-list list-unstyled" style="padding: 0;">
                             <!-- <li> <a class="menu-item btn menuButton py-3" href="#">Web development</a> </li> -->
-                            <li> <a class="menuItem btn py-4" href="Pages/falseUnderConstruction.html">Web development</a> </li>
+                            <li> <a class="menuItem btn py-4" href="Pages/falseUnderConstruction.html" id="webBTN">Web development</a> </li>
                             <!-- menu-item btn btn-link    || "dropdown-item menuButton py-5"-->
                             <br> <br>
-                            <li> <a class="menuItem btn py-4" href="Pages/falseUnderConstruction.html">Game development</a> </li>
+                            <li> <a class="menuItem btn py-4" href="Pages/falseUnderConstruction.html" id="gameBTN">Game development</a> </li>
                             <br> <br>
-                            <li> <a class="menuItem btn py-4" href="Pages/wallpapers.html">Graphic Design</a> </li>
+                            <li> <a class="menuItem btn py-4" href="Pages/wallpapers.html" id="designBTN">Graphic Design</a> </li>
                         </ul>
                     </div>
 
@@ -142,7 +137,9 @@
         <div class="container py-5">
 
             <!-- aboutMe -->
-            <div class="jumbotron text-center cloudBlock" id="body_" style="margin-top: 0% !important;
+             <!-- shadow p-4 mb-4 bg-white  -->
+            <div class="jumbotron text-center cloudBlock shadow " 
+            id="body_" style="margin-top: 0% !important;
             background-color: white !important;">
                 <h1>About me</h1>
 
@@ -161,12 +158,16 @@
             <br> <br> <br>
 
             <!-- projects -->
-            <div class="jumbotron text-center cloudBlock-stationary" id="bodyProjects"
+            <div class="jumbotron text-center cloudBlock-stationary shadow" id="bodyProjects"
             style="background-color: rgb(255, 255, 255) !important">
                 <h1>My latest projects</h1>
                 <br>
                 <div class="row">
-                    <div class="col">
+
+
+
+
+                    <!-- <div class="col">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item my-3"> <a href="http://tadiwataimu.com" target="_blank"> Tadiwa Taimu's website</a></li>
 
@@ -174,10 +175,34 @@
                         </ul>
                     </div>
                     <div class="col">
-                        <!-- <div class="col-lg-6">
+                        <div class="col-lg-6">
                             <img src="Assets/images/elements/mobileScreen.png" style="width: 100%;">
-                        </div> -->
+                        </div>
+                    </div> -->
+
+                    <div class="col-sm-6 py-5">
+                        <a href="http://tadiwataimu.com" target="_blank" class="lead thumbTitle"> Tadiwa Taimu's website
+                        <img class="img-responsive img-thumbnail " src="Assets/screenshots/TDW-TMU_index.html.png" >
+                        </a>
                     </div>
+
+                    <div class="col-sm-6 py-5">
+                        <a href="https://bhekamabika.co.za" target="_blank" class="lead thumbTitle"> Bheka Mabika's website
+                        <img class="img-responsive img-thumbnail " src="Assets/screenshots/Bheka_PersonalWebpage_index.html.png" >
+                        </a>
+                    </div>
+
+                    
+
+                    <div class="col-sm-6 py-5">
+                        <a href="https://bhekamabika.co.za" target="_blank" class="lead thumbTitle"> MyBuddySystem's website
+                        <img class="img-responsive img-thumbnail " src="Assets/screenshots/MyBuddySystems_.png" >
+                        </a>
+                    </div>
+
+
+
+
                 </div>
             </div>
 
@@ -185,7 +210,11 @@
     
     </body>
 
-    <br>
+    <!-- <br> -->
+
+    <hr class="rounded" style="border-radius: 10px; border-top: 3px solid #dac9c98d;
+    margin-top: 3em; padding-top: 1em; width: 75vw;">
+
 
     <footer>
         <div class="container-fluid text-center footer_ d-flex align-items-center justify-content-center"
@@ -198,14 +227,18 @@
         </div>
     </footer>
 
-
     <!-- JAVASCRIPT -->
      <script>
         const imgChar = document.getElementById("character_");
+        const webBTN = document.getElementById("webBTN");
         
         // mouse events: mouse hover & mouse exit
         imgChar.addEventListener('mouseover', () => {imgChar.src = "Assets/silhouette/azaamFullBodyMIX.png"});
         imgChar.addEventListener('mouseout', () => {imgChar.src = "Assets/silhouette/azaamBodyFull.png" } )
-     </script>
+
+        // webBTN.addEventListener('mouseenter', () => {document.body.style.backgroundImage = "url('Assets/images/night_20240502_192423.jpg')" });
+        // 'mouseenter' 'mouseover'
+    
+    </script>
 
 </html>

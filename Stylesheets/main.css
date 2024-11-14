@@ -415,6 +415,13 @@ body.image-background {
 
 /*<< HERO PAGE PERSONA */
 
+
+.thumbTitle{
+    color: #000000 !important;
+    font-size: 1.5rem !important;
+    background-color: azure;
+}
+
 /* OVERLAYS */
 .menu-overlay{
     position: fixed;
@@ -570,4 +577,66 @@ body.image-background {
         padding: 20px;
         width: 95% !important;
     }
+}
+
+/* PAGE TRANSITIONS */
+@view-transition {
+    navigation: auto;
+}
+
+@keyframes move-out_Y {
+    from {transform: translateY(0%);}
+    to {transform: translateY(-100%);}
+}
+@keyframes move-in_Y {
+    from {transform: translateY(100%);}
+    to {transform: translateY(0%);}
+}
+@keyframes move-out_X {
+    from {transform: translateX(0%);}
+    to {transform: translateX(-100%);}
+}
+@keyframes move-in_X {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0%);}
+}
+
+@keyframes scaleIn{ 
+    from{transform: scale(100%);}
+    to{transform: scale(0%);}
+}
+@keyframes scaleOut{ 
+    from{transform: scale(0%);}
+    to{transform: scale(100%);}
+}
+
+@keyframes fadeIn{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+@keyframes fadeOut{
+    from{opacity: 100%;}
+    to{opacity: 0%;}
+}
+
+::view-transition-old(root){
+    /* animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both move-out_Y; */
+
+    animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both move-out_X;
+    animation: 0.4s ease-in both move-Out_X;
+
+    /* animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both scaleIn; */
+
+    /* animation: 0.3s ease-in both fadeOut; */
+}
+
+::view-transition-new(root){
+    /* animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both move-in_Y; */
+
+    animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both move-in_X;
+    animation: 0.4s ease-in both move-in_X;
+
+    /* animation: 0.8s cubic-bezier(0.87, 0, 0.13, 1) both scaleOut; */
+
+    /* animation: 0.3s ease-in both fadeIn; */
 }
