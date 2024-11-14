@@ -36,6 +36,11 @@ body.image-background {
     text-shadow: -2px 0 rgb(25, 25, 25), 0 2px rgb(25, 25, 25), 2px 0 rgb(25, 25, 25), 0 -2px rgb(25, 25, 25);
 }
 
+/* navrbar */
+/* .bg-light{
+    background-color: white !important;
+} */
+
 
 .header_ h1{
     color: #000000;
@@ -78,6 +83,8 @@ body.image-background {
     perspective: 1px;
     transform-style: preserve-3d;
     position: relative;
+
+    height: 30vh;
 }
 
 .header_ img{
@@ -125,7 +132,9 @@ body.image-background {
 
 .hero img{
     transform: scale(1.0,1.0); 
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
+
+    transition: all 0.6s;
 
     /*!! animation !!*/
     /* animation-name: slideInRight;
@@ -139,8 +148,8 @@ body.image-background {
     /* animation-range: 0; */
 }
 .hero img:hover{
-    transform: scale(1.1,1.1); 
-    transform: translateX(-10px);
+    transform: scale(1.05, 1.05); 
+    transform: translateX(10px);
 }
 
 .character{
@@ -251,7 +260,7 @@ body.image-background {
     /* position: relative; */
 
     z-index: -1;
-    border-radius: 10px !important;
+    border-radius: 100px !important;
 }
 
 .footer{
@@ -526,5 +535,39 @@ body.image-background {
     to {
         transform: translateX(8rem) scale(1);
         opacity: 1;
+    }
+}
+
+
+/* MODAL */
+.modal {
+    width: 100% !important;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* Location of the box */
+    /* padding-top: 100px; */
+    left: 0; top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+
+.modal-content{
+    margin: auto;
+    padding: 20px;
+    width: 50% !important;
+    /* Width originally kept at 70%*/
+}
+
+@media only screen and (max-width: 600px){
+    .modal-content{
+        margin: auto;
+        padding: 20px;
+        width: 95% !important;
     }
 }

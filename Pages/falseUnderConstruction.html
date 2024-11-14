@@ -16,7 +16,7 @@
         <meta name="author" content="Azaam Holdman">
 
         <!-- LINKING THE CSS, BOOSTRAP + JS -->
-        <link rel="stylesheet" type="text/css" href="Stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" href="../Stylesheets/main.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -49,7 +49,7 @@
                                     <a class="dropdown-item" href="#">Videogames</a>
                                     <a class="dropdown-item" href="websites.html">Websites</a>
                                     <a class="dropdown-item" href="#">Applications</a>
-                                    <a class="dropdown-item" href="#">Wallpapers</a>
+                                    <a class="dropdown-item" href="wallpapers.html">Wallpapers</a>
                                     <a class="dropdown-item" href="#">The graveyard</a>
                                 </div>
                             </div>
@@ -68,27 +68,64 @@
     <!-- ACTUAL BODY -->
 
     <!-- hero page -->
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-100" style="overflow: hidden;">
         <div class="text-center">
-            <h2 class="display-4"> Under Construction</h2>
-            <h4>:(</h4>
+            <h2 class="display-4" id="mainHeading"> Under Construction</h2>
+            <h2 id="emoticon">:(</h2>
         </div>
 
     </div>
 
     <br>
 
-    <div class="fixed-bottom text-center w-100">
-        <button class="btn btn-primary" id="mainBTN" onclick="changeTitle()">Free Robux</button>
+    <div class="fixed-bottom text-center w-100 py-5">
+        <button class="btn btn-primary" id="mainBTN" onclick="changeTitle()"
+        data-toggle="modal" data-target="#myModal"
+        style="background-color: rgb(56, 204, 88); color: rgb(255, 255, 255); font-size: 1.5rem;
+        border-radius: 10px;">Free Robux</button>
+    </div>
+
+    <!-- <style>
+        #mainBtn{
+            animation: fadeIn 1s ease-in-out !important;
+        }
+    </style> -->
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog-centered"">
+
+            <div class="modal-content">
+
+                 <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="projectTitle">I haves stolen your money :D</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <img src="../Assets/images/characters/hakariDancing.gif" style="width: 256px; height: 256px;">
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+            </div>
+
+        </div>
+
     </div>
 
     <script>
-        // document.title = "All part of my plan";
-        // document.getElementById("mainBTN").innerHTML = document.title;
 
         function changeTitle(){
             document.title = "All part of my plan";
-            document.getElementById("mainBTN").innerHTML = document.title;
+            document.getElementById("mainBTN").innerHTML = "Shatter";
+            document.getElementById("mainHeading").innerHTML = "Just as planned"
+            document.getElementById("emoticon").innerHTML = "";
         }
     </script>
 
