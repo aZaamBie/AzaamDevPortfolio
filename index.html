@@ -79,6 +79,10 @@
                                 <a class="nav-link" href="https://za.linkedin.com/in/azaam-holdman-364b60194" target="_blank">LinkedIn</a>
                             </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/aZaamBie" target="_blank">Github</a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -97,7 +101,10 @@
 
         <div class="container text-center py-5" id="heroCont">
 
-            <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello there! I'm Azaam Holdman</h2>
+            <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+            id="nameChange" 
+            onmouseout="changeText(this, 'Azaam Holdman', 'nameChange')"
+            onmouseover="changeText(this, 'Azaam Dev', 'nameChange',)" > Hello there! I'm Azaam Holdman</h2>
 
             <section class="hero" id="FrontMenu">
                 
@@ -136,11 +143,10 @@
         <!-- CONTAINER MAIN -->
         <div class="container py-5">
 
-            <!-- aboutMe -->
+            <!-- about - quick -->
              <!-- shadow p-4 mb-4 bg-white  -->
             <div class="jumbotron text-center cloudBlock shadow " 
-            id="body_" style="margin-top: 0% !important;
-            background-color: white !important;">
+            id="body_" style="margin-top: 0% !important; background-color: white !important;">
                 <h1>About me</h1>
 
                 <br>
@@ -149,8 +155,11 @@
                     <a href="https://www.uct.ac.za" target="_blank" style="color: rgb(93, 3, 125); ">
                         University Of Cape Town</a>, pursuing a 
                     <abbr title="Bachelor Of Science">BSc</abbr> in
-                    Computer Science and Computer Engineering
+                    Computer Science and Computer Engineering.
                 </p>
+                <p class="mt-3 lead mb-1">
+                    As a freelance front-end web developer, I specialize in creating professional and affordable ePortfolio's.
+                    <br>I also offer digital design services, such as graphic design and video editing.</p>
                 <br>
                 <p>I enjoy programming, gaming, and sending reels to my friends on Instagram :D</p>
             </div>
@@ -161,49 +170,49 @@
             <div class="jumbotron text-center cloudBlock-stationary shadow" id="bodyProjects"
             style="background-color: rgb(255, 255, 255) !important">
                 <h1>My latest projects</h1>
+
                 <br>
+
+                <h3>Websites:</h3>
                 <div class="row">
 
-
-
-
-                    <!-- <div class="col">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item my-3"> <a href="http://tadiwataimu.com" target="_blank"> Tadiwa Taimu's website</a></li>
-
-                            <li class="list-group-item my-3"> <a href="https://bhekamabika.co.za" target="_blank"> Bheka Mabika's website</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <div class="col-lg-6">
-                            <img src="Assets/images/elements/mobileScreen.png" style="width: 100%;">
-                        </div>
-                    </div> -->
-
-                    <div class="col-sm-6 py-5">
-                        <a href="http://tadiwataimu.com" target="_blank" class="lead thumbTitle"> Tadiwa Taimu's website
-                        <img class="img-responsive img-thumbnail " src="Assets/screenshots/TDW-TMU_index.html.png" >
+                    <div class="col-sm-4 py-0">
+                        <a href="http://tadiwataimu.com" target="_blank" class="lead thumbTitle"> Tadiwa Taimu's ePortfolio
+                        <img class="img-responsive img-thumbnail projects" src="Assets/screenshots/TDW-TMU_index.html.png" >
                         </a>
                     </div>
 
-                    <div class="col-sm-6 py-5">
-                        <a href="https://bhekamabika.co.za" target="_blank" class="lead thumbTitle"> Bheka Mabika's website
-                        <img class="img-responsive img-thumbnail " src="Assets/screenshots/Bheka_PersonalWebpage_index.html.png" >
+                    <div class="col-sm-4 py-3">
+                        <a href="https://bhekamabika.co.za" target="_blank" class="lead thumbTitle"> Bheka Mabika's ePortfolio
+                        <img class="img-responsive img-thumbnail projects" src="Assets/screenshots/Bheka_PersonalWebpage_index.html.png" >
                         </a>
                     </div>
 
                     
-
-                    <div class="col-sm-6 py-5">
-                        <a href="https://bhekamabika.co.za" target="_blank" class="lead thumbTitle"> MyBuddySystem's website
-                        <img class="img-responsive img-thumbnail " src="Assets/screenshots/MyBuddySystems_.png" >
+                    <div class="col-sm-4 py-5">
+                        <a href="https://azaambie.github.io/MyBuddySystems/" target="_blank" class="lead thumbTitle"> MyBuddySystem's website
+                        <img class="img-responsive img-thumbnail projects" src="Assets/screenshots/MyBuddySystems_.png" >
                         </a>
                     </div>
 
+                </div>
 
+                <br>
 
+                <h3>Games/Apps:</h3>
+                <div class="row">
+                    <div class="col-sm-12 py-2">
+                        <iframe frameborder="0" src="https://itch.io/embed/2845668?linkback=true&amp;border_width=5&amp;border_color=371b9f" width="560" height="175"><a href="https://azambie.itch.io/uscg-demo">USCG-Demo by aZamBie</a></iframe>
+                    </div>
+
+                    <div class="col-sm-12 py-2">
+                        <iframe frameborder="0" src="https://itch.io/embed/2720650?border_width=5&amp;border_color=cd1675" width="560" height="175"><a href="https://azambie.itch.io/schwierigmemorization">SchwierigMemorization by aZamBie</a></iframe>
+                    </div>
 
                 </div>
+
+
+
             </div>
 
         </div>
@@ -238,6 +247,16 @@
 
         // webBTN.addEventListener('mouseenter', () => {document.body.style.backgroundImage = "url('Assets/images/night_20240502_192423.jpg')" });
         // 'mouseenter' 'mouseover'
+
+        // function for chaning text, when mouse hovered over
+        function changeText(element, newText ,id =""){
+            if (id=='nameChange') {
+                element.textContent = "Hello there! I'm " + newText;
+            }
+
+
+            // element.textContent = newText;
+        }
     
     </script>
 
