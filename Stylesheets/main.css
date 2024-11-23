@@ -12,7 +12,18 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     /* background-color: rgb(90, 1, 233) !important; */
-    background-image: linear-gradient(rgb(90, 1, 233), rgb(69, 1, 179) ) !important; /* NEWER & COOLER */
+
+
+    /* PERSONA 3 RELOAD: 
+    NEWER & COOLER: some blue variant */
+    /* background-image: linear-gradient(rgb(90, 1, 233), rgb(69, 1, 179) ) !important;  */
+
+    /* Persona 4 Golden: #faa622 [better, less jarring on eyes | #ff0505 [a bit too bright] | #c4d70c [neutral] |  */
+    /* background-color: orange !important; */
+    /* background-color: #faa622 !important; */
+
+    /* Persona 5: #c22303 [dark red]   */
+    background-color: #c22303  !important;
 
 
     transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -27,9 +38,10 @@ body{
 }
 body.image-background {
     background-image: url("Assets/images/night_20240502_192423.jpg"); /* Replace with your image URL */
-    background-image: linear-gradient(rgb(78, 1, 201), rgb(59, 1, 152) ) !important;
+    /* background-image: linear-gradient(rgb(78, 1, 201), rgb(59, 1, 152) ) !important; */
     /* background-image: linear-gradient(); */
     /* background-color: transparent;  */
+    /* background-color: orange !important; */
   }
 
 .mask-text{
@@ -149,19 +161,37 @@ body.image-background {
 }
 .hero img:hover{
     transform: scale(1.05, 1.05); 
-    transform: translateX(10px);
+    transform: translateX(-7px);
+
+    /* box-shadow: -200px 0px 1px rgba(0, 0, 0, 1.0); */
 }
 
 .character{
     position: relative;
     animation: slideInRight 1s ease-in-out;
-    z-index: 2;
+    z-index: -1; /* 2 */
+    /* A NEGATIVE z-index means not clickable!! */
     width: 20%;
+
+    /*!!!  newwer, bigger render !!!*/
+    /* overflow: hidden; */
+    width: 300px;
+    height: 200px;
 }
 
 .characterIMG{
     max-height: 80vh;
     max-width: 100%;
+
+    /*!!!! newer !!!!*/
+    z-index: -1;
+
+    width: 600px;
+    height: 400px;
+
+    margin: -100px 0 0 -100px;
+    /* margin: y-axis ? ? scale */
+    /* margin: -150px 0 0 -100px; */
 }
 
 
@@ -235,7 +265,8 @@ body.image-background {
     /* Add border shadow */
     box-shadow: 10px 0px 1px rgba(0, 0, 0, 1.0);
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    /* transition: all 0.6s ; */
 }
 .menuItem:hover{
     transform: scale(1.02,1.02); 
@@ -244,9 +275,12 @@ body.image-background {
     text-shadow: 0 0 10px #00BFFF;
 
     /* Add border shadow */
-    box-shadow: -20px 0px 2px rgba(0, 0, 0, 1.0);
+    /* box-shadow: -20px 0px 2px rgba(0, 0, 0, 1.0); */
 
-    transition: all 0.3s ease;
+    box-shadow: 150px 0px 2px rgba(0, 0, 0, 1.0);
+
+    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease-in-out;
 }
 
 .img-thumbnail.projects, .project{
@@ -267,7 +301,6 @@ body.image-background {
     border-radius: 15px;
     transform: scale(1.02,1.02); 
 
-    /* filter: grayscale(0%); */
     filter: brightness(100%);
 }
 
