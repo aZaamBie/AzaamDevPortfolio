@@ -16,14 +16,14 @@ body{
 
     /* PERSONA 3 RELOAD: 
     NEWER & COOLER: some blue variant */
-    /* background-image: linear-gradient(rgb(90, 1, 233), rgb(69, 1, 179) ) !important;  */
+    background-image: linear-gradient(rgb(90, 1, 233), rgb(69, 1, 179) ) !important; 
 
     /* Persona 4 Golden: #faa622 [better, less jarring on eyes | #ff0505 [a bit too bright] | #c4d70c [neutral] |  */
     /* background-color: orange !important; */
     /* background-color: #faa622 !important; */
 
     /* Persona 5: #c22303 [dark red]   */
-    background-color: #c22303  !important;
+    /* background-color: #c22303  !important; */
 
 
     transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -486,7 +486,7 @@ body.image-background {
 .thumbTitle{
     color: #000000 !important;
     font-size: 1.5rem !important;
-    background-color: azure;
+    /* background-color: azure; */
 
     transform: scale(1.0,1.0); 
     transition: all 0.3s ease;
@@ -495,6 +495,7 @@ body.image-background {
 }
 .thumbTitle:hover{
     background-color: rgb(1, 248, 248);
+    background-color: rgb(255, 255, 255);
 
     transform: scale(1.05,1.05); 
     text-decoration: none;
